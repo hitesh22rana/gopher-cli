@@ -8,6 +8,7 @@ gophers
 _obj/
 _test/
 _vendor/
+bin/
 
 # Go specific
 *.exe
