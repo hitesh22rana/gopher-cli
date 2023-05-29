@@ -1,0 +1,18 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build the app
+    cmds:
+      - GOFLAGS=-mod=mod go build -o bin/gopher-cli main.go
+
+  run:
+    desc: Run the app
+    cmds:
+      - GOFLAGS=-mod=mod go run main.go {{.CLI_ARGS}}
+    silent: false
+
+  clean:
+    desc: Remove all retrieved *.png files from the gophers folder
+    cmds:
+      - rm -r gophers
